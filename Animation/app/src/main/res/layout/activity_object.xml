@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/heard_layout"/>
+
+    <Button
+        android:id="@+id/alpha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="90dp"
+        android:text="透明"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/roatate"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/roatate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="90dp"
+        android:text="旋转"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scale"
+        app:layout_constraintStart_toEndOf="@+id/alpha"
+        />
+
+    <Button
+        android:id="@+id/scale"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="90dp"
+        android:text="缩放"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/translate"
+        app:layout_constraintStart_toEndOf="@+id/roatate"
+        />
+
+    <Button
+        android:id="@+id/translate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="90dp"
+        android:text="平移"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/set"
+        app:layout_constraintStart_toEndOf="@+id/scale"/>
+
+    <Button
+        android:id="@+id/set"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="90dp"
+        android:text="集合"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/translate"
+        />
+
+    <ImageView
+        android:id="@+id/viewShow"
+        android:layout_width="160dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="247dp"
+        android:src="@mipmap/ic_object"
+        app:layout_constraintBottom_toTopOf="@+id/scale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"/>
+    <com.xiaohan.animationtest.MyAnimView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</android.support.constraint.ConstraintLayout>
